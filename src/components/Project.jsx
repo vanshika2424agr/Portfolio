@@ -5,6 +5,19 @@ function Projects() {
   const navigate = useNavigate();
 
   const projects = [
+ {
+  name: "PDF Merger Tool",
+  desc: "A web tool to combine multiple PDF files into one document with instant download support",
+  icon: "📄",
+  live: "#",
+  github: "https://github.com/your-username/pdf-merger"
+},
+  {
+    name: "AI News Generator",
+    desc: "Generate intelligent news content using AI concepts",
+    path: "/ai-news",
+    icon: "🧠"
+  },
     {
       name: "Todo App",
       desc: "Manage daily tasks with add, delete & complete",
@@ -52,42 +65,53 @@ function Projects() {
         My Projects
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-6">
+   <div className="grid md:grid-cols-3 gap-6">
 
-        {projects.map((p, i) => (
-          <div
-            key={i}
-            onClick={() => navigate(p.path)}
-            className="cursor-pointer bg-white dark:bg-slate-800 
-            p-6 rounded-2xl shadow-lg 
-            border border-indigo-200 dark:border-slate-600
-            hover:shadow-2xl hover:scale-105 transition duration-300"
-          >
+  {projects.map((p, i) => (
+    <div
+      key={i}
+      className="bg-white dark:bg-slate-800 
+      p-6 rounded-2xl shadow-lg 
+      border border-indigo-200 dark:border-slate-600
+      hover:shadow-2xl hover:scale-105 transition duration-300"
+    >
 
-            {/* Icon */}
-            <div className="text-4xl mb-3">{p.icon}</div>
+      {/* Icon */}
+      <div className="text-4xl mb-3">{p.icon}</div>
 
-            {/* Title */}
-            <h3 className="text-xl font-semibold">
-              {p.name}
-            </h3>
+      {/* Title */}
+      <h3 className="text-xl font-semibold">
+        {p.name}
+      </h3>
 
-            {/* Description */}
-            <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm">
-              {p.desc}
-            </p>
+      {/* Description */}
+      <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm">
+        {p.desc}
+      </p>
 
-            {/* Open Button */}
-            <div className="mt-4">
-              <button className="bg-indigo-500 text-white px-4 py-1 rounded-lg hover:bg-indigo-600">
-                Open
-              </button>
-            </div>
+      {/* Buttons */}
+      <div className="mt-4 flex gap-3 justify-center">
 
-          </div>
-        ))}
+        {/* Live Demo */}
+        <a href={p.live} target="_blank" rel="noreferrer">
+          <button className="bg-indigo-500 text-white px-4 py-1 rounded-lg hover:bg-indigo-600">
+            Live
+          </button>
+        </a>
+
+        {/* GitHub */}
+        <a href={p.github} target="_blank" rel="noreferrer">
+          <button className="bg-gray-700 text-white px-4 py-1 rounded-lg hover:bg-gray-800">
+            Code
+          </button>
+        </a>
 
       </div>
+
+    </div>
+  ))}
+
+</div>
 
     </div>
   );

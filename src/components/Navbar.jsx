@@ -38,6 +38,14 @@ function Navbar() {
         <Link to="/" className="hover:text-indigo-500 transition">Home</Link>
         <Link to="/login" className="hover:text-indigo-500 transition">Login</Link>
         <Link to="/register" className="hover:text-indigo-500 transition">Register</Link>
+       <a 
+  href="https://pdf-merger-1-yq0p.onrender.com" 
+  target="_blank" 
+  rel="noreferrer"
+  className="hover:text-indigo-500 transition"
+>
+  PDF Merger
+</a>
         <Link to="/todo" className="hover:text-indigo-500 transition">Todo</Link>
         <Link to="/calculator" className="hover:text-indigo-500 transition">Calculator</Link>
         <Link to="/counter" className="hover:text-indigo-500 transition">Counter</Link>
